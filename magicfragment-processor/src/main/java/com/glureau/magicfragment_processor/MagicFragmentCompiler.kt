@@ -20,7 +20,6 @@ class MagicFragmentCompiler(private val environment: SymbolProcessorEnvironment)
 
 @KotlinPoetKspPreview
 class MagicFragmentCompilerProvider : SymbolProcessorProvider {
-    override fun create(environment: SymbolProcessorEnvironment): SymbolProcessor =
+    override fun create(environment: SymbolProcessorEnvironment) =
         MagicFragmentCompiler(environment)
-
 }
