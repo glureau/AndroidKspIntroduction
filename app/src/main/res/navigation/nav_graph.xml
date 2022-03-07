@@ -13,12 +13,23 @@
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/ThirdFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.glureau.androidkspintroduction.SecondFragment"
         android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ThirdFragment"
+        android:name="com.glureau.androidkspintroduction.MagicAlternativeSecondFragment"
+        android:label="@string/alternate_fragment_label"
         tools:layout="@layout/fragment_second">
 
         <action

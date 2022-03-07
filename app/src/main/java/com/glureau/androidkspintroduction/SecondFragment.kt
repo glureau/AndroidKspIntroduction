@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import com.glureau.androidkspintroduction.databinding.FragmentSecondBinding
 

@@ -16,3 +16,4 @@ rootProject.name = "AndroidKspIntroduction"
 include ':app'
 include ':magicfragment-lib'
 include ':magicfragment-processor'
+include ':magicfragment-androidlib'

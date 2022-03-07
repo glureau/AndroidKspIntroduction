@@ -1,20 +1,17 @@
 package com.glureau.androidkspintroduction
 
-import androidx.viewbinding.ViewBinding
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.glureau.androidkspintroduction.databinding.FragmentSecondBinding
+import com.glureau.magicfragment_androidlib.libs.MagicEmptyFragment
+import com.glureau.magicfragment_lib.MagicFragment
 
 @MagicFragment
-class AlternativeSecondFragment : DefaultFragment<FragmentSecondBinding> {
-    override fun FragmentSecondBinding.onViewCreated() {
-
+class AlternativeSecondFragment : MagicEmptyFragment<FragmentSecondBinding> {
+    override fun Fragment.onViewCreated(binding: FragmentSecondBinding) {
+        binding.buttonSecond.setOnClickListener {
+            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+        }
     }
 }
 
-annotation class MagicFragment()
-
-interface DefaultFragment<VB : ViewBinding> {
-    fun VB.onViewCreated() {}
-    fun VB.onStart() {}
-    fun VB.onResume() {}
-    // ...
-}
